@@ -1,0 +1,96 @@
+1756774726: mosquitto version 2.0.22 starting
+1756774726: Config loaded from /mosquitto/config/mosquitto.conf.
+1756774726: Opening ipv4 listen socket on port 1883.
+1756774726: Opening websockets listen socket on port 9001.
+1756774726: mosquitto version 2.0.22 running
+1756849932: mosquitto version 2.0.22 starting
+1756849932: Config loaded from /mosquitto/config/mosquitto.conf.
+1756849932: Opening ipv4 listen socket on port 1883.
+1756849932: Opening websockets listen socket on port 9001.
+1756849932: mosquitto version 2.0.22 running
+1756850382: mosquitto version 2.0.22 terminating
+1756850382: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1756850399: mosquitto version 2.0.22 starting
+1756850399: Config loaded from /mosquitto/config/mosquitto.conf.
+1756850399: Opening ipv4 listen socket on port 1883.
+1756850399: Opening websockets listen socket on port 9001.
+1756850399: mosquitto version 2.0.22 running
+1756850612: New client connected from 172.18.0.1:59236 as mqttx_75319996 (p5, c1, k60, u'aluno').
+1756852126: New client connected from 172.18.0.1:50152 as sub-506d13226888d8 (p2, c1, k60, u'aluno').
+1756852199: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1756852219: New client connected from 172.18.0.1:44704 as pub-358f385b5199a8 (p2, c1, k60, u'aluno').
+1756852231: Client sub-506d13226888d8 closed its connection.
+1756852233: Client pub-358f385b5199a8 closed its connection.
+1756852320: New client connected from 172.18.0.1:46300 as sub-f995c6c62fbf9 (p2, c1, k60, u'aluno').
+1756852321: New client connected from 172.18.0.1:46302 as pub-6cb2a4af472d5 (p2, c1, k60, u'aluno').
+1756852379: Client mqttx_75319996 closed its connection.
+1756852384: New client connected from 172.18.0.1:47802 as mqttx_75319996 (p5, c1, k60, u'aluno').
+1756853198: Client mqttx_75319996 closed its connection.
+1756853366: New client connected from 172.18.0.1:41370 as mqttx_75319996 (p5, c1, k60, u'aluno').
+1756853404: mosquitto version 2.0.22 terminating
+1756853404: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1756853404: Client mqttx_75319996 closed its connection.
+1756853404: Client sub-f995c6c62fbf9 closed its connection.
+1756853404: Client pub-6cb2a4af472d5 closed its connection.
+1756853446: mosquitto version 2.0.22 starting
+1756853446: Config loaded from /mosquitto/config/mosquitto.conf.
+1756853446: Opening ipv4 listen socket on port 1883.
+1756853446: Opening websockets listen socket on port 9001.
+1756853446: mosquitto version 2.0.22 running
+1756853447: New client connected from 172.18.0.1:51424 as sub-f995c6c62fbf9 (p2, c1, k60, u'aluno').
+1756853447: New client connected from 172.18.0.1:51434 as pub-6cb2a4af472d5 (p2, c1, k60, u'aluno').
+1756853606: New client connected from 172.18.0.1:43658 as mqttx_75319996 (p5, c1, k60, u'aluno').
+1756853628: Client mqttx_75319996 closed its connection.
+1756853628: New client connected from 172.18.0.1:48806 as mqttx_75319996 (p5, c1, k60, u'aluno').
+1756853962: Client mqttx_75319996 closed its connection.
+1756854086: New client connected from 172.18.0.1:40096 as mqttx_75319996 (p5, c1, k60, u'aluno').
+1756854146: Client mqttx_75319996 closed its connection.
+1756854206: New client connected from 172.18.0.1:36972 as mqttx_75319996 (p5, c1, k60, u'aluno').
+1756854266: Client mqttx_75319996 closed its connection.
+1756854326: New client connected from 172.18.0.1:59214 as mqttx_75319996 (p5, c1, k60, u'aluno').
+1756854386: Client mqttx_75319996 closed its connection.
+1756854446: New client connected from 172.18.0.1:44752 as mqttx_75319996 (p5, c1, k60, u'aluno').
+1756854506: Client mqttx_75319996 closed its connection.
+1756854566: New client connected from 172.18.0.1:59460 as mqttx_75319996 (p5, c1, k60, u'aluno').
+1756854626: Client mqttx_75319996 closed its connection.
+1756854686: New client connected from 172.18.0.1:52250 as mqttx_75319996 (p5, c1, k60, u'aluno').
+1756854746: Client mqttx_75319996 closed its connection.
+1756854806: New client connected from 172.18.0.1:49730 as mqttx_75319996 (p5, c1, k60, u'aluno').
+1756854866: Client mqttx_75319996 closed its connection.
+1756855247: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1756857048: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1756858293: New connection from 172.18.0.4:54618 on port 1883.
+1756858293: New client connected from 172.18.0.4:54618 as nodered1dc23f15e8376c21 (p2, c1, k60, u'aluno').
+1756858849: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1756859307: Client nodered1dc23f15e8376c21 disconnected.
+1756859307: New connection from 172.18.0.4:35020 on port 1883.
+1756859307: New client connected from 172.18.0.4:35020 as noderedcc2935ed5e54790b (p2, c1, k60, u'aluno').
+1756860223: Client noderedcc2935ed5e54790b disconnected.
+1756860223: mosquitto version 2.0.22 terminating
+1756860223: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1756860223: Client pub-6cb2a4af472d5 closed its connection.
+1756860223: Client sub-f995c6c62fbf9 closed its connection.
+1756860248: mosquitto version 2.0.22 starting
+1756860248: Config loaded from /mosquitto/config/mosquitto.conf.
+1756860248: Opening ipv4 listen socket on port 1883.
+1756860248: Opening websockets listen socket on port 9001.
+1756860248: mosquitto version 2.0.22 running
+1756860248: New client connected from 172.18.0.1:46748 as pub-6cb2a4af472d5 (p2, c1, k60, u'aluno').
+1756860248: New client connected from 172.18.0.1:46762 as sub-f995c6c62fbf9 (p2, c1, k60, u'aluno').
+1756860251: New connection from 172.18.0.5:41558 on port 1883.
+1756860251: New client connected from 172.18.0.5:41558 as noderedbbc44a2d7d1ae2b5 (p2, c1, k60, u'aluno').
+1756860453: Client sub-f995c6c62fbf9 closed its connection.
+1756860455: Client pub-6cb2a4af472d5 closed its connection.
+1756860525: Client noderedbbc44a2d7d1ae2b5 disconnected.
+1756860526: mosquitto version 2.0.22 terminating
+1756860526: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1756860858: mosquitto version 2.0.22 starting
+1756860858: Config loaded from /mosquitto/config/mosquitto.conf.
+1756860858: Opening ipv4 listen socket on port 1883.
+1756860858: Opening websockets listen socket on port 9001.
+1756860858: mosquitto version 2.0.22 running
+1756860861: New connection from 172.18.0.5:40546 on port 1883.
+1756860861: New client connected from 172.18.0.5:40546 as nodered4089ab1b75fd5103 (p2, c1, k60, u'aluno').
+1756860956: Client nodered4089ab1b75fd5103 disconnected.
+1756860957: mosquitto version 2.0.22 terminating
+1756860957: Saving in-memory database to /mosquitto/data//mosquitto.db.
