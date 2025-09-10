@@ -1,6 +1,6 @@
 [
     {
-        "id": "5b4a8a82ae6ca436",
+        "id": "dc9d5d534fab6eb2",
         "type": "tab",
         "label": "Fluxo 1",
         "disabled": false,
@@ -8,7 +8,7 @@
         "env": []
     },
     {
-        "id": "db995892d0bb5a3d",
+        "id": "607da66db889fa93",
         "type": "mqtt-broker",
         "name": "Mosquitto",
         "broker": "mosquitto",
@@ -39,9 +39,132 @@
         "sessionExpiry": ""
     },
     {
-        "id": "4ed11b7585472b3f",
+        "id": "2efdb2c1dc23cfad",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "postgres",
+        "hostFieldType": "str",
+        "port": 5432,
+        "portFieldType": "num",
+        "database": "iot",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": 10,
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": 10000,
+        "connectionTimeoutFieldType": "num",
+        "user": "admin",
+        "userFieldType": "str",
+        "password": "admin",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "3a2988a6f153903d",
+        "type": "mongodb4-client",
+        "name": "",
+        "protocol": "mongodb",
+        "hostname": "mongo",
+        "port": "27017",
+        "dbName": "sensores",
+        "appName": "",
+        "authSource": "",
+        "authMechanism": "DEFAULT",
+        "tls": false,
+        "tlsCAFile": "",
+        "tlsCertificateKeyFile": "",
+        "tlsInsecure": false,
+        "connectTimeoutMS": "30000",
+        "socketTimeoutMS": "0",
+        "minPoolSize": "0",
+        "maxPoolSize": "100",
+        "maxIdleTimeMS": "0",
+        "uri": "",
+        "advanced": "{}",
+        "uriTabActive": "tab-uri-simple"
+    },
+    {
+        "id": "201db2d92c96bd45",
+        "type": "postgresql",
+        "z": "dc9d5d534fab6eb2",
+        "name": "",
+        "query": "",
+        "postgreSQLConfig": "2efdb2c1dc23cfad",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 510,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eaa2a4c93022ded1",
+        "type": "mongodb4",
+        "z": "dc9d5d534fab6eb2",
+        "clientNode": "3a2988a6f153903d",
+        "mode": "collection",
+        "collection": "",
+        "operation": "",
+        "output": "toArray",
+        "maxTimeMS": "0",
+        "handleDocId": false,
+        "name": "",
+        "x": 830,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "27838cf1f6ac63ae",
+        "type": "mqtt in",
+        "z": "dc9d5d534fab6eb2",
+        "name": "",
+        "topic": "sensor/#",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "607da66db889fa93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "8eeeb465656bbdff"
+            ]
+        ]
+    },
+    {
+        "id": "db829189fd79a130",
+        "type": "uuid",
+        "z": "dc9d5d534fab6eb2",
+        "uuidVersion": "v4",
+        "namespaceType": "",
+        "namespace": "",
+        "namespaceCustom": "",
+        "name": "",
+        "field": "payload._id",
+        "fieldType": "msg",
+        "x": 330,
+        "y": 320,
+        "wires": [
+            [
+                "d5c2c838e4af3eb4"
+            ]
+        ]
+    },
+    {
+        "id": "4c35974a37f3211f",
         "type": "debug",
-        "z": "5b4a8a82ae6ca436",
+        "z": "dc9d5d534fab6eb2",
         "name": "debug 1",
         "active": true,
         "tosidebar": true,
@@ -52,66 +175,141 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 820,
-        "y": 300,
+        "y": 60,
         "wires": []
     },
     {
-        "id": "141c764756912bec",
+        "id": "ebaebbe55c0893f4",
         "type": "function",
-        "z": "5b4a8a82ae6ca436",
+        "z": "dc9d5d534fab6eb2",
         "name": "function 1",
-        "func": "var obj = {};\n\nobj.id = msg.id;\nobj.createAt = new Date();\nobj.message ={};\nobj.message.temperature = msg.payload;\nobj.message.humidity = msg.payload.umid;\nobj.message.topic = msg.topic;\n\nmsg = obj;\n\nreturn msg;",
+        "func": "var obj = {};\n\nobj._id = msg.id;\nobj.createAt = new Date();\nobj.temperature = msg.payload.t;\nobj.humidity = msg.payload.umid;\nobj.topic = msg.topic;\n\nmsg = {};\nmsg.payload = obj;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 300,
+        "x": 140,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "94155497ecfb6cee",
+        "type": "function",
+        "z": "dc9d5d534fab6eb2",
+        "name": "function 2",
+        "func": "var objeto = {};\n\nobjeto.query = `INSERT INTO sensores (id, createdAt, temperature, humidity, topic) VALUES ($1, $2, $3, $4, $5)`;\nobjeto.params = [\n    msg.payload._id,\n    msg.payload.createAt,\n    msg.payload.temperature,\n    msg.payload.humidity,\n    msg.payload.topic\n]\n\nmsg = {};\nmsg = objeto;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0591cbadbb241a7e",
+        "type": "mqtt in",
+        "z": "dc9d5d534fab6eb2",
+        "name": "",
+        "topic": "devices/#",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "607da66db889fa93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 320,
         "wires": [
             [
-                "4ed11b7585472b3f"
+                "db829189fd79a130"
             ]
         ]
     },
     {
-        "id": "44a40f18708023c8",
+        "id": "a0933cd92774e2e8",
+        "type": "debug",
+        "z": "dc9d5d534fab6eb2",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "d5c2c838e4af3eb4",
+        "type": "function",
+        "z": "dc9d5d534fab6eb2",
+        "name": "ProcessDataDevice",
+        "func": "var message = {};\nmessage.payload = msg.payload;\nmessage.payload.created_at = new Date();\nmessage.operation = \"insertOne\";\nmessage.collection = \"devices\";\nreturn message;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 320,
+        "wires": [
+            [
+                "a0933cd92774e2e8",
+                "eaa2a4c93022ded1"
+            ]
+        ]
+    },
+    {
+        "id": "8eeeb465656bbdff",
         "type": "uuid",
-        "z": "5b4a8a82ae6ca436",
+        "z": "dc9d5d534fab6eb2",
         "uuidVersion": "v4",
         "namespaceType": "",
         "namespace": "",
         "namespaceCustom": "",
         "name": "",
-        "field": "id",
+        "field": "payload._id",
         "fieldType": "msg",
-        "x": 450,
-        "y": 300,
+        "x": 330,
+        "y": 140,
         "wires": [
             [
-                "141c764756912bec"
+                "a0480feb96a280b3"
             ]
         ]
     },
     {
-        "id": "add5f735781b993f",
-        "type": "mqtt in",
-        "z": "5b4a8a82ae6ca436",
-        "name": "",
-        "topic": "sensor/temperatura",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "db995892d0bb5a3d",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 250,
-        "y": 300,
+        "id": "a0480feb96a280b3",
+        "type": "function",
+        "z": "dc9d5d534fab6eb2",
+        "name": "ProcessDataReading",
+        "func": "var message = {};\nmessage.payload = msg.payload;\nmessage.payload.topic = msg.topic;\nmessage.payload.created_at= new Date();\n\nmessage.operation = \"insertOne\";\nmessage.collection = \"reading_data\";\nreturn message;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 140,
         "wires": [
             [
-                "44a40f18708023c8"
+                "4c35974a37f3211f",
+                "eaa2a4c93022ded1"
             ]
         ]
     }

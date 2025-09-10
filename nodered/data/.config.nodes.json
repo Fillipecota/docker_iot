@@ -466,6 +466,179 @@
             }
         }
     },
+    "node-red-contrib-mongoql": {
+        "name": "node-red-contrib-mongoql",
+        "version": "0.9.7",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "countDoc": {
+                "name": "countDoc",
+                "types": [
+                    "countDoc"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mongoql",
+                "file": "/data/node_modules/node-red-contrib-mongoql/countDoc.js"
+            },
+            "deleteById": {
+                "name": "deleteById",
+                "types": [
+                    "deleteById"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mongoql",
+                "file": "/data/node_modules/node-red-contrib-mongoql/deleteById.js"
+            },
+            "deleteMany": {
+                "name": "deleteMany",
+                "types": [
+                    "deleteMany"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mongoql",
+                "file": "/data/node_modules/node-red-contrib-mongoql/deleteMany.js"
+            },
+            "dropDb": {
+                "name": "dropDb",
+                "types": [
+                    "dropDb"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mongoql",
+                "file": "/data/node_modules/node-red-contrib-mongoql/dropDb.js"
+            },
+            "dropDbCol": {
+                "name": "dropDbCol",
+                "types": [
+                    "dropDbCol"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mongoql",
+                "file": "/data/node_modules/node-red-contrib-mongoql/dropDbCol.js"
+            },
+            "find": {
+                "name": "find",
+                "types": [
+                    "find"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mongoql",
+                "file": "/data/node_modules/node-red-contrib-mongoql/find.js"
+            },
+            "findById": {
+                "name": "findById",
+                "types": [
+                    "findById"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mongoql",
+                "file": "/data/node_modules/node-red-contrib-mongoql/findById.js"
+            },
+            "insertDoc": {
+                "name": "insertDoc",
+                "types": [
+                    "insertDoc"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mongoql",
+                "file": "/data/node_modules/node-red-contrib-mongoql/insertDoc.js"
+            },
+            "insertMany": {
+                "name": "insertMany",
+                "types": [
+                    "insertMany"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mongoql",
+                "file": "/data/node_modules/node-red-contrib-mongoql/insertMany.js"
+            },
+            "insertOne": {
+                "name": "insertOne",
+                "types": [
+                    "insertOne"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mongoql",
+                "file": "/data/node_modules/node-red-contrib-mongoql/insertOne.js"
+            },
+            "listDb": {
+                "name": "listDb",
+                "types": [
+                    "listDb"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mongoql",
+                "file": "/data/node_modules/node-red-contrib-mongoql/listDb.js"
+            },
+            "listDbCol": {
+                "name": "listDbCol",
+                "types": [
+                    "listDbCol"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mongoql",
+                "file": "/data/node_modules/node-red-contrib-mongoql/listDbCol.js"
+            },
+            "updateById": {
+                "name": "updateById",
+                "types": [
+                    "updateById"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mongoql",
+                "file": "/data/node_modules/node-red-contrib-mongoql/updateById.js"
+            },
+            "updateMany": {
+                "name": "updateMany",
+                "types": [
+                    "updateMany"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mongoql",
+                "file": "/data/node_modules/node-red-contrib-mongoql/updateMany.js"
+            },
+            "updateUnset": {
+                "name": "updateUnset",
+                "types": [
+                    "updateUnset"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mongoql",
+                "file": "/data/node_modules/node-red-contrib-mongoql/updateUnset.js"
+            }
+        }
+    },
     "node-red-contrib-mongodb4": {
         "name": "node-red-contrib-mongodb4",
         "version": "3.1.1",

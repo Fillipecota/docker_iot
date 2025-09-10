@@ -17,9 +17,6 @@
                 "welcome": "4.1.0"
             }
         },
-        "debug": {
-            "filter": "filterAll",
-            "clearType": "all"
-        }
+        "menu-menu-item-sidebar": true
     }
 }
