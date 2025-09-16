@@ -97,8 +97,8 @@
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 510,
-        "y": 480,
+        "x": 590,
+        "y": 40,
         "wires": [
             []
         ]
@@ -134,8 +134,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 160,
-        "y": 140,
+        "x": 120,
+        "y": 100,
         "wires": [
             [
                 "8eeeb465656bbdff"
@@ -190,8 +190,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 140,
-        "y": 480,
+        "x": 300,
+        "y": 40,
         "wires": [
             []
         ]
@@ -208,8 +208,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 480,
+        "x": 440,
+        "y": 40,
         "wires": [
             []
         ]
@@ -227,8 +227,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 140,
-        "y": 320,
+        "x": 120,
+        "y": 260,
         "wires": [
             [
                 "db829189fd79a130"
@@ -268,8 +268,8 @@
         "y": 320,
         "wires": [
             [
-                "a0933cd92774e2e8",
-                "eaa2a4c93022ded1"
+                "eaa2a4c93022ded1",
+                "a0933cd92774e2e8"
             ]
         ]
     },
@@ -297,7 +297,7 @@
         "type": "function",
         "z": "dc9d5d534fab6eb2",
         "name": "ProcessDataReading",
-        "func": "var messager = {};\nmessager.payload = msg.payload;\nmessager.payload.topic = msg.topic;\nmessager.payload.created_at= new Date();\n\nmessager.operation = \"insertOne\";\nmessager.collection = \"reading_data\";\nreturn messager;",
+        "func": "var message = {};\nmessage.payload = msg.payload;\nmessage.payload.topic = msg.topic;\nmessage.payload.created_at = new Date();\n\nmessage.operation = \"insertOne\";\nmessage.collection = \"reading_data\";\nreturn message;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -308,8 +308,168 @@
         "y": 140,
         "wires": [
             [
+                "eaa2a4c93022ded1",
                 "4c35974a37f3211f",
-                "eaa2a4c93022ded1"
+                "e74ef72fb6e48fb7"
+            ]
+        ]
+    },
+    {
+        "id": "e8e913d57c94b55a",
+        "type": "mqtt out",
+        "z": "dc9d5d534fab6eb2",
+        "name": "",
+        "topic": "testando1",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "607da66db889fa93",
+        "x": 360,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "3e83279be27293a4",
+        "type": "inject",
+        "z": "dc9d5d534fab6eb2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"device_id\":\"ESP32-001\",\"servo-motor\":\"90°c\"}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 440,
+        "wires": [
+            [
+                "e8e913d57c94b55a"
+            ]
+        ]
+    },
+    {
+        "id": "d8c67181bf7b9431",
+        "type": "complete",
+        "z": "dc9d5d534fab6eb2",
+        "name": "",
+        "scope": [
+            "eaa2a4c93022ded1"
+        ],
+        "uncaught": false,
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "03243129f859119a"
+            ]
+        ]
+    },
+    {
+        "id": "03243129f859119a",
+        "type": "mqtt out",
+        "z": "dc9d5d534fab6eb2",
+        "name": "",
+        "topic": "testando2",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "607da66db889fa93",
+        "x": 360,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "e74ef72fb6e48fb7",
+        "type": "switch",
+        "z": "dc9d5d534fab6eb2",
+        "name": "",
+        "property": "payload.data",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "30",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 140,
+        "wires": [
+            [
+                "25746cf89df74df6"
+            ]
+        ]
+    },
+    {
+        "id": "0b34f01ebd52c4fb",
+        "type": "mqtt out",
+        "z": "dc9d5d534fab6eb2",
+        "name": "",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "607da66db889fa93",
+        "x": 1250,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ed6e3c996ff0a094",
+        "type": "debug",
+        "z": "dc9d5d534fab6eb2",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "25746cf89df74df6",
+        "type": "function",
+        "z": "dc9d5d534fab6eb2",
+        "name": "function 3",
+        "func": "var command = {\n\npayload: {\n    power_on: true,\n    actuador: \"MOTOR CC\"\n    },\n    topic: `/device/${msg.payload.device_id}/cmd/motor`\n};\nreturn command;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 140,
+        "wires": [
+            [
+                "0b34f01ebd52c4fb",
+                "ed6e3c996ff0a094"
             ]
         ]
     }
