@@ -115,8 +115,8 @@
         "maxTimeMS": "0",
         "handleDocId": false,
         "name": "",
-        "x": 830,
-        "y": 220,
+        "x": 770,
+        "y": 200,
         "wires": [
             []
         ]
@@ -125,7 +125,7 @@
         "id": "27838cf1f6ac63ae",
         "type": "mqtt in",
         "z": "dc9d5d534fab6eb2",
-        "name": "",
+        "name": "Sub Sensor",
         "topic": "sensor/#",
         "qos": "0",
         "datatype": "auto-detect",
@@ -134,7 +134,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 120,
+        "x": 130,
         "y": 100,
         "wires": [
             [
@@ -154,7 +154,7 @@
         "field": "payload._id",
         "fieldType": "msg",
         "x": 330,
-        "y": 320,
+        "y": 240,
         "wires": [
             [
                 "d5c2c838e4af3eb4"
@@ -165,7 +165,7 @@
         "id": "4c35974a37f3211f",
         "type": "debug",
         "z": "dc9d5d534fab6eb2",
-        "name": "debug 1",
+        "name": "ResponseReading",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -174,8 +174,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 60,
+        "x": 790,
+        "y": 80,
         "wires": []
     },
     {
@@ -218,7 +218,7 @@
         "id": "0591cbadbb241a7e",
         "type": "mqtt in",
         "z": "dc9d5d534fab6eb2",
-        "name": "",
+        "name": "Sub DEVICE",
         "topic": "devices/#",
         "qos": "0",
         "datatype": "auto-detect",
@@ -227,8 +227,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 120,
-        "y": 260,
+        "x": 130,
+        "y": 200,
         "wires": [
             [
                 "db829189fd79a130"
@@ -239,7 +239,7 @@
         "id": "a0933cd92774e2e8",
         "type": "debug",
         "z": "dc9d5d534fab6eb2",
-        "name": "debug 2",
+        "name": "ResponseDevise",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -248,8 +248,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 400,
+        "x": 770,
+        "y": 280,
         "wires": []
     },
     {
@@ -264,8 +264,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 320,
+        "x": 510,
+        "y": 240,
         "wires": [
             [
                 "eaa2a4c93022ded1",
@@ -304,7 +304,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
+        "x": 520,
         "y": 140,
         "wires": [
             [
@@ -318,7 +318,7 @@
         "id": "e8e913d57c94b55a",
         "type": "mqtt out",
         "z": "dc9d5d534fab6eb2",
-        "name": "",
+        "name": "Pub CMD_1",
         "topic": "testando1",
         "qos": "0",
         "retain": "false",
@@ -328,7 +328,7 @@
         "correl": "",
         "expiry": "",
         "broker": "607da66db889fa93",
-        "x": 360,
+        "x": 1190,
         "y": 440,
         "wires": []
     },
@@ -349,7 +349,7 @@
         "topic": "",
         "payload": "{\"device_id\":\"ESP32-001\",\"servo-motor\":\"90°c\"}",
         "payloadType": "json",
-        "x": 150,
+        "x": 1030,
         "y": 440,
         "wires": [
             [
@@ -366,8 +366,8 @@
             "eaa2a4c93022ded1"
         ],
         "uncaught": false,
-        "x": 150,
-        "y": 500,
+        "x": 1030,
+        "y": 360,
         "wires": [
             [
                 "03243129f859119a"
@@ -378,7 +378,7 @@
         "id": "03243129f859119a",
         "type": "mqtt out",
         "z": "dc9d5d534fab6eb2",
-        "name": "",
+        "name": "Pub CMD_2",
         "topic": "testando2",
         "qos": "0",
         "retain": "false",
@@ -388,8 +388,8 @@
         "correl": "",
         "expiry": "",
         "broker": "607da66db889fa93",
-        "x": 360,
-        "y": 500,
+        "x": 1210,
+        "y": 360,
         "wires": []
     },
     {
@@ -409,7 +409,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 870,
+        "x": 770,
         "y": 140,
         "wires": [
             [
@@ -421,7 +421,7 @@
         "id": "0b34f01ebd52c4fb",
         "type": "mqtt out",
         "z": "dc9d5d534fab6eb2",
-        "name": "",
+        "name": "Pub CMD",
         "topic": "",
         "qos": "0",
         "retain": "false",
@@ -431,15 +431,15 @@
         "correl": "",
         "expiry": "",
         "broker": "607da66db889fa93",
-        "x": 1250,
-        "y": 140,
+        "x": 1220,
+        "y": 180,
         "wires": []
     },
     {
         "id": "ed6e3c996ff0a094",
         "type": "debug",
         "z": "dc9d5d534fab6eb2",
-        "name": "debug 3",
+        "name": "ResponseCommand",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -449,27 +449,181 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1260,
-        "y": 60,
+        "y": 80,
         "wires": []
     },
     {
         "id": "25746cf89df74df6",
         "type": "function",
         "z": "dc9d5d534fab6eb2",
-        "name": "function 3",
-        "func": "var command = {\n\npayload: {\n    power_on: true,\n    actuador: \"MOTOR CC\"\n    },\n    topic: `/device/${msg.payload.device_id}/cmd/motor`\n};\nreturn command;",
+        "name": "ProcessDataCommand",
+        "func": "var command = {\n\n    payload: {\n        power_on: true,\n        actuador: \"MOTOR CC\"\n    },\n    topic: `device/${msg.payload.device_id}/cmd/motor`\n};\nreturn command;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1060,
+        "x": 990,
         "y": 140,
         "wires": [
             [
                 "0b34f01ebd52c4fb",
                 "ed6e3c996ff0a094"
+            ]
+        ]
+    },
+    {
+        "id": "b6d1b8d68936554b",
+        "type": "mqtt in",
+        "z": "dc9d5d534fab6eb2",
+        "name": "Sub ACK",
+        "topic": "device/+/ack/+",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "607da66db889fa93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 460,
+        "wires": [
+            [
+                "bb02e47269ce9036"
+            ]
+        ]
+    },
+    {
+        "id": "52abc3c16e1e5137",
+        "type": "mqtt in",
+        "z": "dc9d5d534fab6eb2",
+        "name": "Sub STATUS",
+        "topic": "device/+/state/+",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "607da66db889fa93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 580,
+        "wires": [
+            [
+                "65901b96d59ab632"
+            ]
+        ]
+    },
+    {
+        "id": "8e602ace589f5c3f",
+        "type": "debug",
+        "z": "dc9d5d534fab6eb2",
+        "name": "ResponseAck",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "65bd906b09118c06",
+        "type": "debug",
+        "z": "dc9d5d534fab6eb2",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "bb02e47269ce9036",
+        "type": "uuid",
+        "z": "dc9d5d534fab6eb2",
+        "uuidVersion": "v4",
+        "namespaceType": "",
+        "namespace": "",
+        "namespaceCustom": "",
+        "name": "",
+        "field": "payload._id",
+        "fieldType": "msg",
+        "x": 310,
+        "y": 460,
+        "wires": [
+            [
+                "890f00d15d39b917"
+            ]
+        ]
+    },
+    {
+        "id": "890f00d15d39b917",
+        "type": "function",
+        "z": "dc9d5d534fab6eb2",
+        "name": "ProcessACK",
+        "func": "var ack = {\n   payload: {\n      ...msg.payload,\n      created_at: new Date(),\n      raw: JSON.stringify(msg.payload),\n      topic: msg.topic,\n      device_id: msg.topic.split(\"/\")[1],\n      actuador: msg.topic.split(\"/\")[3],\n   },\n   operation: \"insertOne\",\n   collection: \"confirmation\"\n};\nreturn ack;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 460,
+        "wires": [
+            [
+                "e99503cfa1597329",
+                "8e602ace589f5c3f"
+            ]
+        ]
+    },
+    {
+        "id": "e99503cfa1597329",
+        "type": "mongodb4",
+        "z": "dc9d5d534fab6eb2",
+        "clientNode": "3a2988a6f153903d",
+        "mode": "collection",
+        "collection": "",
+        "operation": "",
+        "output": "toArray",
+        "maxTimeMS": "0",
+        "handleDocId": false,
+        "name": "",
+        "x": 710,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "65901b96d59ab632",
+        "type": "function",
+        "z": "dc9d5d534fab6eb2",
+        "name": "FindStatus",
+        "func": "var device_id = msg.topic.split(\"/\")[1];\nvar actuador = msg.topic.split(\"/\")[3];\n\nmsg.payload = {\n    device_id: device_id,\n    actuador: actuador\n}\nmsg.data={\n    status:msg.payload.status,\n    updated_status:msg.payload.updated_status\n}\nmsg.collection = \"status\";\nmsg.operation = \"findOne\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 580,
+        "wires": [
+            [
+                "e99503cfa1597329",
+                "65bd906b09118c06"
             ]
         ]
     }

@@ -454,3 +454,83 @@ To fix this, use `chmod 0700 /mosquitto/config/passwd`.
 1757983912: Saving in-memory database to /mosquitto/data//mosquitto.db.
 1757983912: Client sub-6bf9953588c5d closed its connection.
 1757983912: Client pub-aa8bc4377a0b48 closed its connection.
+1758060019: mosquitto version 2.0.22 starting
+1758060019: Config loaded from /mosquitto/config/mosquitto.conf.
+1758060019: Warning: File /mosquitto/config/passwd has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwd`.
+1758060019: Opening ipv4 listen socket on port 1883.
+1758060019: Opening websockets listen socket on port 9001.
+1758060019: mosquitto version 2.0.22 running
+1758060032: New connection from 172.18.0.6:38520 on port 1883.
+1758060032: New client connected from 172.18.0.6:38520 as nodered878bacc0b977515f (p2, c1, k60, u'aluno').
+1758061820: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1758062116: New client connected from 172.18.0.1:53140 as sub-f2d80e06650de (p2, c1, k60, u'aluno').
+1758062119: New client connected from 172.18.0.1:53154 as pub-52ce1307afc128 (p2, c1, k60, u'aluno').
+1758063381: Client nodered878bacc0b977515f disconnected.
+1758063381: New connection from 172.18.0.6:46394 on port 1883.
+1758063381: New client connected from 172.18.0.6:46394 as nodered9b07917e84540b93 (p2, c1, k60, u'aluno').
+1758063478: Client nodered9b07917e84540b93 disconnected.
+1758063478: New connection from 172.18.0.6:53166 on port 1883.
+1758063478: New client connected from 172.18.0.6:53166 as noderedaeb3a1359c66c418 (p2, c1, k60, u'aluno').
+1758063620: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1758063683: Client noderedaeb3a1359c66c418 disconnected.
+1758063683: New connection from 172.18.0.6:52190 on port 1883.
+1758063683: New client connected from 172.18.0.6:52190 as nodered42c85eb8e371e153 (p2, c1, k60, u'aluno').
+1758063827: Client nodered42c85eb8e371e153 disconnected.
+1758063827: New connection from 172.18.0.6:36370 on port 1883.
+1758063827: New client connected from 172.18.0.6:36370 as nodered2490cb2e6c9a7371 (p2, c1, k60, u'aluno').
+1758063865: Client nodered2490cb2e6c9a7371 disconnected.
+1758063865: New connection from 172.18.0.6:51520 on port 1883.
+1758063865: New client connected from 172.18.0.6:51520 as noderedce4a914b2d205467 (p2, c1, k60, u'aluno').
+1758065421: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1758065500: Client noderedce4a914b2d205467 disconnected.
+1758065500: New connection from 172.18.0.6:45920 on port 1883.
+1758065500: New client connected from 172.18.0.6:45920 as noderedcd42cb3ef52aa3b3 (p2, c1, k60, u'aluno').
+1758065605: Client noderedcd42cb3ef52aa3b3 disconnected.
+1758065605: New connection from 172.18.0.6:48982 on port 1883.
+1758065605: New client connected from 172.18.0.6:48982 as nodered9e4d724113e934cd (p2, c1, k60, u'aluno').
+1758065663: Client nodered9e4d724113e934cd disconnected.
+1758065663: New connection from 172.18.0.6:48416 on port 1883.
+1758065663: New client connected from 172.18.0.6:48416 as nodered95150b12919e0455 (p2, c1, k60, u'aluno').
+1758065919: Client nodered95150b12919e0455 disconnected.
+1758065919: New connection from 172.18.0.6:43674 on port 1883.
+1758065919: New client connected from 172.18.0.6:43674 as noderedd522a53d4921728e (p2, c1, k60, u'aluno').
+1758066478: Client noderedd522a53d4921728e disconnected.
+1758066478: New connection from 172.18.0.6:38070 on port 1883.
+1758066478: New client connected from 172.18.0.6:38070 as noderedd61679546230ba63 (p2, c1, k60, u'aluno').
+1758066712: Client noderedd61679546230ba63 disconnected.
+1758066712: New connection from 172.18.0.6:48590 on port 1883.
+1758066712: New client connected from 172.18.0.6:48590 as nodered83c976dc489f65cd (p2, c1, k60, u'aluno').
+1758067222: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1758068014: Client nodered83c976dc489f65cd disconnected.
+1758068014: New connection from 172.18.0.6:46312 on port 1883.
+1758068014: New client connected from 172.18.0.6:46312 as nodered89491b5e8cae15dd (p2, c1, k60, u'aluno').
+1758069023: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1758069517: Client nodered89491b5e8cae15dd disconnected.
+1758069517: New connection from 172.18.0.6:41184 on port 1883.
+1758069517: New client connected from 172.18.0.6:41184 as noderedeb66793b142eccdf (p2, c1, k60, u'aluno').
+1758069523: New client connected from 172.18.0.1:51798 as pub-57046280bfd8d (p2, c1, k60, u'aluno').
+1758069550: Client noderedeb66793b142eccdf disconnected.
+1758069550: New connection from 172.18.0.6:45464 on port 1883.
+1758069550: New client connected from 172.18.0.6:45464 as noderede04fdf6603d66593 (p2, c1, k60, u'aluno').
+1758069724: Client noderede04fdf6603d66593 disconnected.
+1758069724: New connection from 172.18.0.6:42416 on port 1883.
+1758069724: New client connected from 172.18.0.6:42416 as nodered918566dd076e63c6 (p2, c1, k60, u'aluno').
+1758069836: Client nodered918566dd076e63c6 disconnected.
+1758069836: New connection from 172.18.0.6:51528 on port 1883.
+1758069836: New client connected from 172.18.0.6:51528 as noderedb22ac96c06e6b5b1 (p2, c1, k60, u'aluno').
+1758070024: Client noderedb22ac96c06e6b5b1 disconnected.
+1758070024: New connection from 172.18.0.6:41468 on port 1883.
+1758070024: New client connected from 172.18.0.6:41468 as nodered294108ad3061dcd7 (p2, c1, k60, u'aluno').
+1758070372: Client nodered294108ad3061dcd7 disconnected.
+1758070372: New connection from 172.18.0.6:57888 on port 1883.
+1758070372: New client connected from 172.18.0.6:57888 as nodered7608422618f35c37 (p2, c1, k60, u'aluno').
+1758070503: Client nodered7608422618f35c37 disconnected.
+1758070503: New connection from 172.18.0.6:52186 on port 1883.
+1758070503: New client connected from 172.18.0.6:52186 as nodered9d8ba243df18b53e (p2, c1, k60, u'aluno').
+1758070520: Client pub-52ce1307afc128 closed its connection.
+1758070522: Client pub-57046280bfd8d closed its connection.
+1758070523: Client sub-f2d80e06650de closed its connection.
+1758070534: Client nodered9d8ba243df18b53e disconnected.
+1758070535: mosquitto version 2.0.22 terminating
+1758070535: Saving in-memory database to /mosquitto/data//mosquitto.db.
